@@ -1,0 +1,40 @@
+/* ---------------- Reset all styles --------*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* ---------------- Header --------*/
+
+.header{
+  display: flex;
+  font-size: 1.9rem;
+}
+
+.headerl__logo{
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.header__title{
+  color: #5f6368;
+  font-size: 1.5rem;
+}
+.icon__colorGrayheaderTop{
+  color: #5f6368;
+}
+.icon__google{
+  color: blue;
+  margin: 0px 10px 0px 20px;
+}
+.searchBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+
+#444746
