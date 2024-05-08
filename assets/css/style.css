@@ -4,7 +4,7 @@
     padding: 0;
   }
 body{
-  background-color: #dcebefb5;
+  background-color: rgb(228, 228, 253);
 }
 
 /* ---------------- Header --------*/
@@ -20,7 +20,7 @@ body{
 .header__top__logo{
   display: flex;
   align-items: center;
-  margin-right: 50px;
+  margin-right: 90px;
 }
 
 .header__top__logo__burger{
@@ -83,11 +83,12 @@ body{
   display: flex;
   align-items: center;
   gap : 10px;
-  background-color: #c1e7fe;
+  background-color: #c1e7f5;
   padding: 15px;
   margin-left: 10px;
   border-radius: 16px;
   width: max-content;
+  box-shadow: rgba(0, 0, 0, 0.23) 1px 1px 2px;
 }
 
 .header__left__creatContact{
@@ -99,10 +100,10 @@ body{
 
 .header__left__item{
   display: flex;
-  gap : 10px;
+  justify-content: space-between;
   align-items: center;
   background-color: #c1e7fe;
-  width: 230px;
+  width: 200px;
   padding: 15px;
   margin-left: 10px;
   border-radius: 25px;
@@ -112,7 +113,7 @@ body{
   gap : 10px;
   display: flex;
   align-items: center;
-  width: 230px;
+  width: 200px;
   padding: 10px;
   margin-left: 10px;
   border-radius: 25px;
@@ -126,7 +127,7 @@ body{
   display: flex;
   gap : 10px;
   align-items: center;
-  width: 230px;
+  width: 200px;
   padding: 10px;
   margin-left: 10px;
   border-radius: 25px;
@@ -141,7 +142,7 @@ body{
   display: flex;
   gap : 10px;
   align-items: center;
-  width: 230px;
+  width: 200px;
   padding: 10px;
   margin-left: 10px;
   border-radius: 25px;
