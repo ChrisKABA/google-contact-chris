@@ -7,27 +7,35 @@
 
 /* ---------------- Header --------*/
 
-.header{
+/* ---------------- Header Top --------*/
+
+.header__top{
   display: flex;
-  font-size: 1.9rem;
 }
 
-.headerl__logo{
-  font-size: 2.4rem;
+.header__top__logo{
   display: flex;
   align-items: center;
 }
 
+.header__top__logo__burger{
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 12px;
+  margin: 4px;
+}
+
+.googleContactLogo{
+  width: 40px;
+  margin-right: 4px;
+}
+
 .header__title{
   color: #5f6368;
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 .icon__colorGrayheaderTop{
   color: #5f6368;
-}
-.icon__google{
-  color: blue;
-  margin: 0px 10px 0px 20px;
 }
 .searchBar{
   display: flex;
@@ -35,6 +43,3 @@
   justify-content: space-between;
   width: 70%;
 }
-
-
-#444746
