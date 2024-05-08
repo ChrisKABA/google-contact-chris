@@ -11,11 +11,13 @@
 
 .header__top{
   display: flex;
+  margin-top: 1%;
 }
 
 .header__top__logo{
   display: flex;
   align-items: center;
+  margin-right: 50px;
 }
 
 .header__top__logo__burger{
@@ -37,9 +39,29 @@
 .icon__colorGrayheaderTop{
   color: #5f6368;
 }
-.searchBar{
+
+
+.header__top__searchBar{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 70%;
+}
+
+.header__top__searchBar__input{
+  border: none;
+  background-color: #f0f3f4;
+  padding: 15px;
+  border-radius: 0px 10px 0px 0px;
+}
+
+
+.header__top__searchBar__btnSearch{
+  background-color: #f0f3f4;
+  padding: 15px;
+  border-radius: 10px 0px 0px 0px;
+}
+
+.header__top__icons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
