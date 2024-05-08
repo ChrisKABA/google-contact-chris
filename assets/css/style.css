@@ -91,7 +91,7 @@ body{
 }
 
 .header__left__creatContact{
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .header__left__creatContact__btnPlus{
   font-size: 25px;
@@ -111,6 +111,35 @@ body{
 .header__left__item2{
   gap : 10px;
   display: flex;
+  align-items: center;
+  width: 230px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 25px;
+}
+
+.header__left__update__title{
+  margin: 20px 0px 20px 15px;
+  font-weight: bold;
+}
+.header__left__update__item{
+  display: flex;
+  gap : 10px;
+  align-items: center;
+  width: 230px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 25px;
+}
+
+.header__left__libelles__title{
+  margin: 20px 0px 20px 15px;
+  font-weight: bold;
+}
+
+.header__left__libelle__item{
+  display: flex;
+  gap : 10px;
   align-items: center;
   width: 230px;
   padding: 10px;
