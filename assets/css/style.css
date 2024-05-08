@@ -54,7 +54,7 @@ body{
   background-color:#f0f3f4;
   padding: 15px;
   margin-right: 20px;
-  border-radius: 0px 10px 0px 0px;
+  border-radius: 0px 10px 10px 0px;
   width: 300px;
   outline: none;
 }
@@ -64,7 +64,7 @@ body{
   background-color: #f0f3f4;
   padding: 10px;
   font-size: 25px;
-  border-radius: 10px 0px 0px 0px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .header__top__icons{
@@ -78,6 +78,10 @@ body{
 }
 
 /* ---------------- Header Left --------*/
+
+.header__left{
+  margin-right: 32px;
+}
 
 .header__left__creatContact{
   display: flex;
@@ -146,4 +150,24 @@ body{
   padding: 10px;
   margin-left: 10px;
   border-radius: 25px;
+}
+
+/* ---------------- Container --------*/
+
+.Container{
+  display: flex;
+}
+
+/* ---------------- Main --------*/
+
+.main{
+  background-color: white;
+  width: 79vw;
+  margin-right: 1.5%;
+  padding: 30px 20px 0px 20px;
+  border-radius: 30px;
+}
+
+th{
+  text-align: left;
 }
