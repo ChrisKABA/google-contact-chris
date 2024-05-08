@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
   }
-
+body{
+  background-color: #dcebefb5;
+}
 
 /* ---------------- Header --------*/
 
@@ -11,7 +13,8 @@
 
 .header__top{
   display: flex;
-  margin-top: 1%;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .header__top__logo{
@@ -48,7 +51,7 @@
 
 .header__top__searchBar__input{
   border: none;
-  background-color: #f0f3f4;
+  background-color:#f0f3f4;
   padding: 15px;
   margin-right: 20px;
   border-radius: 0px 10px 0px 0px;
@@ -72,4 +75,45 @@
 
 .header__top__icons{
   font-size: 22px;
+}
+
+/* ---------------- Header Left --------*/
+
+.header__left__creatContact{
+  display: flex;
+  align-items: center;
+  gap : 10px;
+  background-color: #c1e7fe;
+  padding: 15px;
+  margin-left: 10px;
+  border-radius: 16px;
+  width: max-content;
+}
+
+.header__left__creatContact{
+  margin-bottom: 15px;
+}
+.header__left__creatContact__btnPlus{
+  font-size: 25px;
+}
+
+.header__left__item{
+  display: flex;
+  gap : 10px;
+  align-items: center;
+  background-color: #c1e7fe;
+  width: 230px;
+  padding: 15px;
+  margin-left: 10px;
+  border-radius: 25px;
+}
+
+.header__left__item2{
+  gap : 10px;
+  display: flex;
+  align-items: center;
+  width: 230px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 25px;
 }
