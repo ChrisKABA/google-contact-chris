@@ -50,13 +50,17 @@
   border: none;
   background-color: #f0f3f4;
   padding: 15px;
+  margin-right: 20px;
   border-radius: 0px 10px 0px 0px;
+  width: 300px;
+  outline: none;
 }
 
 
 .header__top__searchBar__btnSearch{
   background-color: #f0f3f4;
-  padding: 15px;
+  padding: 10px;
+  font-size: 25px;
   border-radius: 10px 0px 0px 0px;
 }
 
@@ -64,4 +68,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.header__top__icons{
+  font-size: 22px;
 }
