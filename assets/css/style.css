@@ -192,6 +192,10 @@ body{
   border-radius: 30px;
 }
 
+.listContact{
+  display: none;
+}
+
 .main__title{
   font-weight: normal;
   color: #46484b;

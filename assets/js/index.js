@@ -10,4 +10,8 @@ function visibilityBtnCreateAction() {
     creatAction.style.display = "block"
 }
 
+function name(params) {
+    
+}
+
 createBtn.addEventListener('click',visibilityBtnCreateAction)
