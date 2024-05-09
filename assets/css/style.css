@@ -92,14 +92,38 @@ body{
   margin-left: 10px;
   border-radius: 16px;
   width: max-content;
+  cursor: pointer;
+}
+
+.header__left__creatContact:hover{
   box-shadow: rgba(0, 0, 0, 0.23) 1px 1px 2px;
 }
 
-.header__left__creatContact{
-  margin-bottom: 25px;
+.creatAction{
+  background-color: white;
+  width: max-content;
+  box-shadow: rgba(19, 19, 19, 0.358) 1px 1px 2px;
+  border-radius: 5px;
+  margin-left: 10px;
+  z-index: 1;
+  position: absolute;
+  display: none;
+}
+
+.creatAction div {
+  padding: 10px 15px 15px 15px;
+}
+
+.creatAction div:hover{
+  background-color: #c4c7ca;
+  cursor: pointer;
 }
 .header__left__creatContact__btnPlus{
   font-size: 25px;
+}
+
+.header__left__list{
+  margin-top: 25px;
 }
 
 .header__left__item{
@@ -204,6 +228,7 @@ body{
 .main__content__item{
   display: flex;
   margin-bottom: 15px;
+  align-items: center;
 }
 
 .main__content__libellesContainer{
