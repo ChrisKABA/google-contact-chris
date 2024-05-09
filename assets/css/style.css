@@ -268,3 +268,46 @@ body{
   border-radius: 50%;
   color: white;
 }
+
+/* ---------------- Windows Create Contact --------*/
+
+.congo{
+  background-image: url('./assets/images/Flag_of_the_Democratic_Republic_of_the_Congo.svg.png'); 
+  width:100px; 
+  height:100px;
+}
+
+.windowCreateContact{
+  width: 70%;
+}
+
+.windowCreateContact__photo{
+ 
+}
+.windowCreateContact__photo img {
+ width: 160px;
+}
+
+.addPhoto{
+  position: absolute;
+  z-index: 1;
+  top: 250px;
+  left: 400px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  border-radius: 50%;
+  color: white;
+  font-size: 27px;
+  font-weight: bolder;
+  border: 5px solid white;
+}
+
+.windowCreateContact__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
