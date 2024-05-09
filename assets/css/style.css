@@ -174,34 +174,39 @@ body{
   margin-bottom: 10px;
   font-size: 28px;
 }
+
 .main__content{
   width: 100%;
 }
 
-th{
-  text-align: left;
-  color: #46484b;
+.main__content__title{
+  display: flex;
+  border-bottom: 1px solid gray;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-.contactIconsAction{
+.main__content__title__item{
+  width: 22%;
+}
+
+.main__content__title__item2{
+  width: 11%;
   display: flex;
   justify-content: space-between;
 }
 
-.borderTable{
-  border-bottom: 1px solid #b8b8bb;
-  padding-top: 15px;
-}
-
-.marginT{
-  padding-top: 15px;
-  padding-bottom: 10px;
-}
-
 .main__content__item{
   display: flex;
-  /* align-items: center;
-  gap: 5px; */
+}
+
+.main__content__item__i{
+  width: 22%;
+}
+
+.main__content__item__image{
+  display: flex;
+  align-items: center;
 }
 
 .main__content__item__picture{
@@ -213,6 +218,21 @@ th{
   background-color: darkblue;
   border-radius: 50%;
   color: white;
+}
+
+th{
+  text-align: left;
+  color: #46484b;
+}
+
+.borderTable{
+  border-bottom: 1px solid #b8b8bb;
+  padding-top: 15px;
+}
+
+.marginT{
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 tbody td {
