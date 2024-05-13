@@ -1,0 +1,30 @@
+.flex{
+    display: flex;
+}
+
+.block{
+    display: block;
+}
+
+.displayNone{
+    display: none;
+}
+
+.alignItemCenter{
+    align-items: center;
+}
+
+.maxContent{
+    width: max-content;
+}
+
+.cursorPointer{
+    cursor: pointer;
+}
+
+.gap-10{
+    gap: 10px;
+}
+.absolute{
+    position: absolute;
+}

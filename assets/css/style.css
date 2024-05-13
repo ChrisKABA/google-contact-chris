@@ -83,31 +83,23 @@ body{
   margin-right: 32px;
 }
 
-.header__left__creatContact{
-  display: flex;
-  align-items: center;
-  gap : 10px;
+.header__left__creatContactContainer{
   background-color: #c1e7f5;
   padding: 15px;
   margin-left: 10px;
   border-radius: 16px;
-  width: max-content;
-  cursor: pointer;
 }
 
-.header__left__creatContact:hover{
+.header__left__creatContactContainer:hover{
   box-shadow: rgba(0, 0, 0, 0.23) 1px 1px 2px;
 }
 
 .creatAction{
   background-color: white;
-  width: max-content;
   box-shadow: rgba(19, 19, 19, 0.358) 1px 1px 2px;
   border-radius: 5px;
   margin-left: 10px;
   z-index: 1;
-  position: absolute;
-  display: none;
 }
 
 .creatAction div {
@@ -190,10 +182,6 @@ body{
   margin-right: 1.5%;
   padding: 30px 20px 0px 20px;
   border-radius: 30px;
-}
-
-.listContact{
-  display: none;
 }
 
 .main__title{
@@ -381,6 +369,4 @@ body{
   margin-top: 20px;
 }
 
-.displayNone{
-  display: none;
-}
+
