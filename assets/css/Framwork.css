@@ -14,8 +14,19 @@
     align-items: center;
 }
 
+.spaceBetween{
+    justify-content: space-between;
+}
 .maxContent{
     width: max-content;
+}
+
+.center-h{
+    justify-content: center;
+}
+
+.center-v{
+    align-items: center;
 }
 
 .cursorPointer{
@@ -25,6 +36,19 @@
 .gap-10{
     gap: 10px;
 }
+
+.gap-30{
+    gap: 30px;
+}
+
 .absolute{
     position: absolute;
+}
+
+.fixed{
+    position: fixed;
+}
+
+.relative{
+    position: relative;
 }

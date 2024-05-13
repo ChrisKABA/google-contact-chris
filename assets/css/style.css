@@ -156,6 +156,17 @@ body{
 .header__left__libelles__title{
   margin: 20px 0px 20px 15px;
   font-weight: bold;
+  width: 220px;
+  height: 30px;
+}
+
+.header__left__libelles__title__btnPlus{
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.header__left__libelles__title__btnPlus:hover{
+  background-color: gray;
 }
 
 .header__left__libelle__item{
@@ -369,4 +380,45 @@ body{
   margin-top: 20px;
 }
 
+/* ---------------- MODAL --------*/
 
+.windowDark{
+  width: 100vw;
+  height: 100vh;
+  background-color: #5f636888;
+  z-index: 2;
+  top: 0px;
+}
+
+.modal{
+  margin-left: auto;
+  margin-top: 0px;
+  z-index: 4;
+}
+
+.modal__createLibelle{
+  width: 350px;
+  background-color: white;
+  border-radius: 25px;
+  padding-top: 25px;
+}
+
+.modal__createLibelle__field{
+  height: 40px;
+  width: 95%;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.modal__createLibelle__title{
+  font-size: 20px;
+}
+
+.modal__createLibelle__btnAction{
+  color: blue;
+  margin-bottom: 30px;
+  justify-content: flex-end;
+}
