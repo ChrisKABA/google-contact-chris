@@ -52,3 +52,15 @@
 .relative{
     position: relative;
 }
+
+.overflow-y{
+    overflow-y: auto;
+}
+
+.Allwindow-y{
+    height: 80vh;
+}
+
+.Allwindow-x{
+    width: 100vw;
+}

@@ -80,7 +80,9 @@ body{
 /* ---------------- Header Left --------*/
 
 .header__left{
-  margin-right: 32px;
+  margin-right: 15px;
+  overflow-x: hidden;
+  width: 270px;
 }
 
 .header__left__creatContactContainer{
@@ -154,7 +156,7 @@ body{
 }
 
 .header__left__libelles__title{
-  margin: 20px 0px 20px 15px;
+  margin: 10px 0px 10px 15px;
   font-weight: bold;
   width: 220px;
   height: 30px;
