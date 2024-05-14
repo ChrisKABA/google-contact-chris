@@ -1,11 +1,13 @@
 
 let ContainerCreateBtn = document.querySelector('.header__left__creatContactContainer');
-let oneContact = document.querySelector('.creatAction__oneContact')
+let oneContact = document.querySelector('.creatAction__oneContact');
 let listContact = document.querySelector('.main__listContact')
 let windowCreateContact = document.querySelector('.windowCreateContact')
 let contactBtn = document.querySelector('.header__left__contacBtn')
 let btnPlusLibelles = document.querySelector('.header__left__libelles__title__btnPlus')
-
+let windowDark = document.querySelector('.windowDark')
+let btnNothingLibelles = document.querySelector('.modal__createLibelle__btnAction__nothing')
+let saveLibelle = document.querySelector('.modal__createLibelle__btnAction__save')
 
 
 function visibilityBtnCreateAction() {
@@ -29,13 +31,11 @@ function OpenWindowsListContact() {
     windowCreateContact.style.display = 'none'; 
 }
 
-function showModalAddLibelles(params) {
-    let windowDark = document.querySelector('.windowDark')
+function showModalAddLibelles() {
     windowDark.style.display = "flex";
 }
 
 function hiddenModalAddLibelles() {
-    let windowDark = document.querySelector('.windowDark')
     windowDark.style.display = "none";
 }
 
@@ -44,6 +44,9 @@ ContainerCreateBtn.addEventListener('click',visibilityBtnCreateAction);
 oneContact.addEventListener('click',OpenWindowsCreatContact);
 contactBtn.addEventListener('click',OpenWindowsListContact);
 btnPlusLibelles.addEventListener('click',showModalAddLibelles);
+btnNothingLibelles.addEventListener('click',hiddenModalAddLibelles);
+
+
 
 
 

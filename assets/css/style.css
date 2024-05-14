@@ -422,3 +422,12 @@ body{
   margin-bottom: 30px;
   justify-content: flex-end;
 }
+
+.modal__createLibelle__btnAction__item{
+  padding: 6px;
+  border-radius: 9px;
+}
+
+.modal__createLibelle__btnAction__item:hover{
+  background-color: rgba(0, 255, 255, 0.281);
+}
