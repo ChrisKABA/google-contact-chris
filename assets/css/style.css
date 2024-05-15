@@ -131,6 +131,23 @@ body{
   border-radius: 25px;
 }
 
+.header__left__libelle__item:hover .header__left__libelle__item__partie2__icon{
+  visibility: visible;
+}
+
+.header__left__libelle__item__partie2{
+  width: 200px;
+}
+
+.header__left__libelle__item__partie2__icon{
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.header__left__libelle__item__partie2__icon:hover{
+  background-color: #5f6368;
+}
+
 .header__left__item2{
   gap : 10px;
   display: flex;
@@ -155,6 +172,8 @@ body{
   border-radius: 25px;
 }
 
+
+
 .header__left__libelles__title{
   margin: 10px 0px 10px 15px;
   font-weight: bold;
@@ -176,7 +195,6 @@ body{
   gap : 10px;
   align-items: center;
   width: 200px;
-  padding: 10px;
   margin-left: 10px;
   border-radius: 25px;
 }
