@@ -8,6 +8,8 @@ let btnPlusLibelles = document.querySelector('.header__left__libelles__title__bt
 let windowDark = document.querySelector('.windowDark');
 let btnNothingLibelles = document.querySelector('.modal__createLibelle__btnAction__nothing');
 let saveLibelle = document.querySelector('.modal__createLibelle__btnAction__save');
+const btnRenameLibelle = document.querySelectorAll('.btnRenameLibelle');
+const libelleName = document.querySelector('#newLibelle');
 
 
 function visibilityBtnCreateAction() {
@@ -39,11 +41,26 @@ function hiddenModalAddLibelles() {
     windowDark.style.display = "none";
 }
 
+function createElement(type, properties = {}) {
+    const element = document.createElement(type);
+    Object.assign(element, properties);
+    return element;
+}
+
+function createIcon(text, clickHandler) {
+    return createElement('img', {
+        src: text,
+        onclick: clickHandler,
+        alt : 'renommer icon'
+    });
+}
+
 
 function createLibelle() {
     
+    const libelleId = crypto.randomUUID();
     const libelles = document.querySelector('.header__left__libelles');
-    const libelleName = document.querySelector('#newLibelle');
+    
 
 
     const svg = document.createElement('img');
@@ -54,15 +71,39 @@ function createLibelle() {
     const span = document.createElement('span');
     span.textContent = libelleName.value
 
+    const partie2 = document.createElement('div')
+    partie2.classList.add("header__left__libelle__item__partie2", "flex", "spaceBetween", "alignItemCenter");
+
+    const partie2__icon1 = createIcon('./assets/images/material-Icon/edit-icon.svg',function () {
+        renameLibelle(libelleId)
+    });
+    partie2__icon1.classList.add('visibilityHidden','header__left__libelle__item__partie2__icon')
+
+    const partie2__icon2 = document.createElement('img');
+    partie2__icon2.classList.add('visibilityHidden','header__left__libelle__item__partie2__icon')
+    partie2__icon2.setAttribute('src','./assets/images/material-Icon/delete-icon.svg');
+    partie2__icon2.setAttribute('alt', "renommer icon");
+
     
     const libelleItem = document.createElement('div');
-    libelleItem.className = 'header__left__libelle__item';
+    libelleItem.classList.add('header__left__libelle__item','flex', 'alignItemCenter');
+    libelleItem.setAttribute('id',libelleId);
 
 
-    libelleItem.append(svg, span);
+    partie2.appendChild(span);
+    libelleItem.append(svg, partie2, partie2__icon1, partie2__icon2);
     libelles.appendChild(libelleItem);
     hiddenModalAddLibelles()
 }
+
+function renameLibelle(libelleId) {
+    const libelleItem = document.getElementById(libelleId);
+    const libelleOldName = libelleItem.querySelector('span')
+    console.log(libelleOldName)
+    // showModalAddLibelles()
+}
+
+
 
 
 ContainerCreateBtn.addEventListener('click',visibilityBtnCreateAction);
@@ -71,3 +112,7 @@ contactBtn.addEventListener('click',OpenWindowsListContact);
 btnPlusLibelles.addEventListener('click',showModalAddLibelles);
 btnNothingLibelles.addEventListener('click',hiddenModalAddLibelles);
 saveLibelle.addEventListener('click',createLibelle);
+for (let index = 0; index < btnRenameLibelle.length; index++) {
+    btnRenameLibelle[index].addEventListener('click',renameLibelle);
+}
+
