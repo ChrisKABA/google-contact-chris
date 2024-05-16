@@ -301,6 +301,18 @@ body{
   padding-left: 30px;
 }
 
+.btnSaveContact{
+  padding: 10px;
+  background-color: darkblue;
+  color: white;
+  border-radius: 10px;
+}
+
+.btnSaveContact:hover{
+  background-color: rgb(108, 108, 212);
+}
+
+
 .windowCreateContact__header{
   display: flex;
   align-items: center;
@@ -421,6 +433,33 @@ body{
   background-color: white;
   border-radius: 25px;
   padding-top: 25px;
+}
+
+.modal__libelle__title{
+  font-size: 20px;
+}
+
+.modal__deleteLibelle{
+  width: 520px;
+}
+
+.modal__deleteLibelle .modal__libelle__btnAction{
+  margin-top: 20px;
+}
+
+.modal__deletelibelle__radio{
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+/* .modal__deletelibelle__label{
+  padding-left: 10px;
+
+} */
+
+.modal__deleteLibelle__text{
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .modal__libelle__field{

@@ -11,7 +11,10 @@ let saveLibelle = document.querySelector('.modal__createLibelle__btnAction__save
 const libelleName = document.querySelector('#newLibelle');
 const modal__renameLibelle = document.querySelector('.modal__renameLibelle');
 const modal__createLibelle = document.querySelector('.modal__createLibelle');
-const modal__renameLibelle__btnAction__save = document.querySelector('.modal__renameLibelle__btnAction__save');
+const modal__renameLibelle__btnAction = document.querySelector('.modal__renameLibelle__btnAction');
+const modal__deleteLibelle = document.querySelector('.modal__deleteLibelle');
+const modal__deleteLibelle__btnAction = document.querySelector('.modal__deleteLibelle__btnAction');
+const btnSaveContact = document.querySelector('.btnSaveContact');
 
 
 function visibilityBtnCreateAction() {
@@ -43,8 +46,15 @@ function showModalAddLibelles() {
 function showModalRenameLibelles(libelleId) {
     windowDark.style.display = "flex";
     modal__renameLibelle.style.display = "flex"
-    modal__renameLibelle__btnAction__save.addEventListener('click', function () {
-        renameLibellePart2(libelleId)
+    modal__renameLibelle__btnAction.addEventListener('click', function () {
+        renameLibellePart2(libelleId);
+    });
+}
+function showModalDeleteLibelle(libelleId) {
+    windowDark.style.display = "flex";
+    modal__deleteLibelle.style.display = "flex"
+    modal__deleteLibelle__btnAction.addEventListener('click', function () {
+        deleteLibellePart2(libelleId);
     });
 }
 
@@ -52,6 +62,7 @@ function hiddenModalLibelles() {
     windowDark.style.display = "none";
     modal__createLibelle.style.display = 'none'
     modal__renameLibelle.style.display = "none"
+    modal__deleteLibelle.style.display = "none"
 }
 
 function createElement(type, properties = {}) {
@@ -90,9 +101,10 @@ function createLibelle() {
     });
     partie2__icon1.classList.add('visibilityHidden','header__left__libelle__item__partie2__icon');
 
-    const partie2__icon2 = document.createElement('img');
+    const partie2__icon2 = createIcon('./assets/images/material-Icon/delete-icon.svg',function () {
+        deleteLibellePart1(libelleId);
+    });
     partie2__icon2.classList.add('visibilityHidden','header__left__libelle__item__partie2__icon')
-    partie2__icon2.setAttribute('src','./assets/images/material-Icon/delete-icon.svg');
     partie2__icon2.setAttribute('alt', "renommer icon");
 
     
@@ -124,15 +136,85 @@ function renameLibellePart2(libelleId) {
     hiddenModalLibelles()  
 }
 
+function deleteLibellePart1(libelleId) {
+    const libelleItem = document.getElementById(libelleId);
+    showModalDeleteLibelle(libelleId)
+}
 
+function deleteLibellePart2(libelleId) {
+    const libelleItem = document.getElementById(libelleId);
+    libelleItem.remove()
+    hiddenModalLibelles()
+}
+
+function createContact() {
+    const conctactId = crypto.randomUUID();
+    const Contacts = document.querySelector('.main__content');
+
+
+    const spanLibelle1 = document.createElement('span');
+    spanLibelle1.textContent = "Bureau";
+
+    const spanLibelle2 = document.createElement('span');
+    spanLibelle2.textContent = "Bureau";
+
+    const divLibelles = document.createElement('div');
+    divLibelles.className = 'main__content__libellesContainer';
+
+    const spanItem1 = document.createElement('span');
+    spanItem1.textContent = "chriskaba7@gmail.com";
+
+    const spanItem2 = document.createElement('span');
+    spanItem2.textContent = "+243 81 21 36 337";
+
+    const spanItem3 = document.createElement('span');
+    spanItem3.textContent = "Chez les mamans";
+
+
+    const contactName = document.createElement('span');
+    contactName.textContent = "Believe";
+
+
+    const divPicture = document.createElement('div');
+    divPicture.className = 'main__content__item__picture';
+    divPicture.textContent = "B";
+
+
+    const divPresentation = document.createElement('div');
+    divPresentation.classList.add('main__content__item__i','main__content__item__image')
+
+
+    const contact = document.createElement('div');
+    contact.className = 'main__content__item';
+
+    
+    
+
+}
+
+
+{/* <div class="main__content__item">
+    <div class="main__content__item__i main__content__item__image">
+        <div class="main__content__item__picture">C</div>
+        <span>My Mother</span>
+    </div>
+    <span class="main__content__item__i">chriskaba7@gmail.com</span>
+    <span class="main__content__item__i">+243 81 21 36 337</span>
+    <span class="main__content__item__i">Chez les mamans</span>
+    <div class="main__content__libellesContainer">
+        <span class="main__content__libelles">Bureau</span>
+        <span class="main__content__libelles">Bureau</span>
+    </div>
+</div> */}
 
 ContainerCreateBtn.addEventListener('click',visibilityBtnCreateAction);
 oneContact.addEventListener('click',OpenWindowsCreatContact);
 contactBtn.addEventListener('click',OpenWindowsListContact);
 btnPlusLibelles.addEventListener('click',showModalAddLibelles);
-btnNothingLibelles[0].addEventListener('click',hiddenModalLibelles);
-btnNothingLibelles[1].addEventListener('click',hiddenModalLibelles);
 saveLibelle.addEventListener('click',createLibelle);
-
+for (let index = 0; index < btnNothingLibelles.length; index++) {
+    btnNothingLibelles[index].addEventListener('click',hiddenModalLibelles);
+}
+btnSaveContact.addEventListener('click',)
 
 
