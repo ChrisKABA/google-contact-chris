@@ -15,6 +15,7 @@ const modal__renameLibelle__btnAction = document.querySelector('.modal__renameLi
 const modal__deleteLibelle = document.querySelector('.modal__deleteLibelle');
 const modal__deleteLibelle__btnAction = document.querySelector('.modal__deleteLibelle__btnAction');
 const btnSaveContact = document.querySelector('.btnSaveContact');
+const tabContact = []
 
 
 function visibilityBtnCreateAction() {
@@ -148,31 +149,48 @@ function deleteLibellePart2(libelleId) {
 }
 
 function createContact() {
+
+    
     const conctactId = crypto.randomUUID();
     const Contacts = document.querySelector('.main__content');
+    const prenom = document.getElementById('prenom').value;
+    const nom= document.getElementById('nom');
+    const entreprise = document.getElementById('entreprise');
+    const email = document.getElementById('email');
+    const tel = document.getElementById('tel');
+    const contactItem = {conctactId, prenom.value,}
+
+    tabContact = []
+    
+
 
 
     const spanLibelle1 = document.createElement('span');
     spanLibelle1.textContent = "Bureau";
+    spanLibelle1.className = 'main__content__libelles';
 
-    const spanLibelle2 = document.createElement('span');
-    spanLibelle2.textContent = "Bureau";
+    // const spanLibelle2 = document.createElement('span');
+    // spanLibelle2.textContent = "Bureau";
+    // spanLibelle2.className = 'main__content__libelles';
 
     const divLibelles = document.createElement('div');
     divLibelles.className = 'main__content__libellesContainer';
 
     const spanItem1 = document.createElement('span');
-    spanItem1.textContent = "chriskaba7@gmail.com";
+    spanItem1.textContent = email.value;
+    spanItem1.className = 'main__content__item__i';
 
     const spanItem2 = document.createElement('span');
-    spanItem2.textContent = "+243 81 21 36 337";
+    spanItem2.textContent = tel.value;
+    spanItem2.className = 'main__content__item__i';
 
     const spanItem3 = document.createElement('span');
-    spanItem3.textContent = "Chez les mamans";
+    spanItem3.textContent = entreprise.value;
+    spanItem3.className = 'main__content__item__i';
 
 
     const contactName = document.createElement('span');
-    contactName.textContent = "Believe";
+    contactName.textContent = prenom.value + nom.value;
 
 
     const divPicture = document.createElement('div');
@@ -186,26 +204,20 @@ function createContact() {
 
     const contact = document.createElement('div');
     contact.className = 'main__content__item';
+    contact.id = conctactId;
 
     
-    
+    // divLibelles.append(spanLibelle1,spanLibelle2);
+    divLibelles.append(spanLibelle1);
+    divPresentation.append(divPicture,contactName);
+    contact.append(divPresentation,spanItem1,spanItem2,spanItem3,divLibelles);
+    Contacts.appendChild(contact);
+
+    OpenWindowsListContact()
 
 }
 
 
-{/* <div class="main__content__item">
-    <div class="main__content__item__i main__content__item__image">
-        <div class="main__content__item__picture">C</div>
-        <span>My Mother</span>
-    </div>
-    <span class="main__content__item__i">chriskaba7@gmail.com</span>
-    <span class="main__content__item__i">+243 81 21 36 337</span>
-    <span class="main__content__item__i">Chez les mamans</span>
-    <div class="main__content__libellesContainer">
-        <span class="main__content__libelles">Bureau</span>
-        <span class="main__content__libelles">Bureau</span>
-    </div>
-</div> */}
 
 ContainerCreateBtn.addEventListener('click',visibilityBtnCreateAction);
 oneContact.addEventListener('click',OpenWindowsCreatContact);
@@ -215,6 +227,6 @@ saveLibelle.addEventListener('click',createLibelle);
 for (let index = 0; index < btnNothingLibelles.length; index++) {
     btnNothingLibelles[index].addEventListener('click',hiddenModalLibelles);
 }
-btnSaveContact.addEventListener('click',)
+btnSaveContact.addEventListener('click',createContact)
 
 
