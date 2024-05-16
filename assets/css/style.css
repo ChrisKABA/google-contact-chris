@@ -416,38 +416,36 @@ body{
   z-index: 4;
 }
 
-.modal__createLibelle{
+.modal__libelle{
   width: 350px;
   background-color: white;
   border-radius: 25px;
   padding-top: 25px;
 }
 
-.modal__createLibelle__field{
-  height: 40px;
+.modal__libelle__field{
+  height: 45px;
   width: 95%;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid gray;
   padding-left: 10px;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 40px;
+  font-size: 15px;
 }
 
-.modal__createLibelle__title{
-  font-size: 20px;
-}
 
-.modal__createLibelle__btnAction{
+.modal__libelle__btnAction{
   color: blue;
   margin-bottom: 30px;
   justify-content: flex-end;
 }
 
-.modal__createLibelle__btnAction__item{
+.modal__libelle__btnAction__item{
   padding: 6px;
-  border-radius: 9px;
+  border-radius: 10px;
 }
 
-.modal__createLibelle__btnAction__item:hover{
+.modal__libelle__btnAction__item:hover{
   background-color: rgba(0, 255, 255, 0.281);
 }

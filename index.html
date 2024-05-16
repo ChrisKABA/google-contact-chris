@@ -125,7 +125,6 @@
                             <span class="main__content__libelles">Bureau</span>
                             <span class="main__content__libelles">Bureau</span>
                         </div>
-                    
                     </div>
                     <div class="main__content__item">
                         <div class="main__content__item__i main__content__item__image">
@@ -258,14 +257,25 @@
     </div>
     <div class="windowDark flex absolute center-h center-v displayNone">
         <div class="modal absolute">
-            <div class="modal__createLibelle flex center-h">
-                <div>
-                    <span  class="modal__createLibelle__title">Créer un libellé</span>
-                    <input type="text" class="modal__createLibelle__field" name="newLibelle" id="newLibelle" placeholder="Nouveau libellé">
+            <div class="modal__createLibelle modal__libelle flex center-h displayNone">
+                <div class=".maxContent">
+                    <span  class="modal__libelle__title">Créer un libellé</span>
+                    <input type="text" class="modal__libelle__field" name="newLibelle" id="newLibelle" placeholder="Nouveau libellé">
                     <span class="displayNone">vous n'avez spécifier aucun nom</span>
-                    <div class="modal__createLibelle__btnAction flex gap-30 ">
-                        <div class="modal__createLibelle__btnAction__nothing modal__createLibelle__btnAction__item cursorPointer">Non, ne rien faire</div>
-                        <div class="modal__createLibelle__btnAction__save modal__createLibelle__btnAction__item cursorPointer">Enregistrer</div>
+                    <div class="modal__libelle__btnAction flex gap-30 ">
+                        <div class="modal__libelle__btnAction__nothing modal__libelle__btnAction__item cursorPointer">Non, ne rien faire</div>
+                        <div class="modal__createLibelle__btnAction__save modal__libelle__btnAction__item cursorPointer">Enregistrer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__renameLibelle modal__libelle flex center-h displayNone">
+                <div>
+                    <span  class="modal__libelle__title">Renommer le libellé</span>
+                    <input type="text" class="modal__libelle__field" name="oldLibelle" id="oldLibelle" placeholder="Nouveau libellé">
+                    <span class="displayNone">vous n'avez spécifier aucun nom</span>
+                    <div class="modal__libelle__btnAction flex gap-30 ">
+                        <div class="modal__libelle__btnAction__nothing modal__libelle__btnAction__item cursorPointer">Non, ne rien faire</div>
+                        <div class="modal__renameLibelle__btnAction__save modal__libelle__btnAction__item cursorPointer">Enregistrer</div>
                     </div>
                 </div>
             </div>

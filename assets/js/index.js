@@ -6,10 +6,12 @@ let windowCreateContact = document.querySelector('.windowCreateContact');
 let contactBtn = document.querySelector('.header__left__contacBtn');
 let btnPlusLibelles = document.querySelector('.header__left__libelles__title__btnPlus');
 let windowDark = document.querySelector('.windowDark');
-let btnNothingLibelles = document.querySelector('.modal__createLibelle__btnAction__nothing');
+let btnNothingLibelles = document.querySelectorAll('.modal__libelle__btnAction__nothing');
 let saveLibelle = document.querySelector('.modal__createLibelle__btnAction__save');
-const btnRenameLibelle = document.querySelectorAll('.btnRenameLibelle');
 const libelleName = document.querySelector('#newLibelle');
+const modal__renameLibelle = document.querySelector('.modal__renameLibelle');
+const modal__createLibelle = document.querySelector('.modal__createLibelle');
+const modal__renameLibelle__btnAction__save = document.querySelector('.modal__renameLibelle__btnAction__save');
 
 
 function visibilityBtnCreateAction() {
@@ -34,11 +36,22 @@ function OpenWindowsListContact() {
 }
 
 function showModalAddLibelles() {
+    modal__createLibelle.style.display = 'flex'
     windowDark.style.display = "flex";
 }
 
-function hiddenModalAddLibelles() {
+function showModalRenameLibelles(libelleId) {
+    windowDark.style.display = "flex";
+    modal__renameLibelle.style.display = "flex"
+    modal__renameLibelle__btnAction__save.addEventListener('click', function () {
+        renameLibellePart2(libelleId)
+    });
+}
+
+function hiddenModalLibelles() {
     windowDark.style.display = "none";
+    modal__createLibelle.style.display = 'none'
+    modal__renameLibelle.style.display = "none"
 }
 
 function createElement(type, properties = {}) {
@@ -60,8 +73,6 @@ function createLibelle() {
     
     const libelleId = crypto.randomUUID();
     const libelles = document.querySelector('.header__left__libelles');
-    
-
 
     const svg = document.createElement('img');
     svg.setAttribute('src','./assets/images/libelle.svg');
@@ -75,9 +86,9 @@ function createLibelle() {
     partie2.classList.add("header__left__libelle__item__partie2", "flex", "spaceBetween", "alignItemCenter");
 
     const partie2__icon1 = createIcon('./assets/images/material-Icon/edit-icon.svg',function () {
-        renameLibelle(libelleId)
+        renameLibellePart1(libelleId);
     });
-    partie2__icon1.classList.add('visibilityHidden','header__left__libelle__item__partie2__icon')
+    partie2__icon1.classList.add('visibilityHidden','header__left__libelle__item__partie2__icon');
 
     const partie2__icon2 = document.createElement('img');
     partie2__icon2.classList.add('visibilityHidden','header__left__libelle__item__partie2__icon')
@@ -93,16 +104,25 @@ function createLibelle() {
     partie2.appendChild(span);
     libelleItem.append(svg, partie2, partie2__icon1, partie2__icon2);
     libelles.appendChild(libelleItem);
-    hiddenModalAddLibelles()
+    hiddenModalLibelles()
 }
 
-function renameLibelle(libelleId) {
+
+function renameLibellePart1(libelleId) {
     const libelleItem = document.getElementById(libelleId);
-    const libelleOldName = libelleItem.querySelector('span')
-    console.log(libelleOldName)
-    // showModalAddLibelles()
+    const libelleOldName = libelleItem.querySelector('span');
+    const oldLibelle = document.getElementById('oldLibelle')
+    oldLibelle.value = libelleOldName.textContent;
+    showModalRenameLibelles(libelleId)
 }
 
+function renameLibellePart2(libelleId) {
+    const libelleItem = document.getElementById(libelleId);
+    const libelleOldName = libelleItem.querySelector('span');
+    const newName = document.getElementById('oldLibelle')
+    libelleOldName.textContent = newName.value
+    hiddenModalLibelles()  
+}
 
 
 
@@ -110,9 +130,9 @@ ContainerCreateBtn.addEventListener('click',visibilityBtnCreateAction);
 oneContact.addEventListener('click',OpenWindowsCreatContact);
 contactBtn.addEventListener('click',OpenWindowsListContact);
 btnPlusLibelles.addEventListener('click',showModalAddLibelles);
-btnNothingLibelles.addEventListener('click',hiddenModalAddLibelles);
+btnNothingLibelles[0].addEventListener('click',hiddenModalLibelles);
+btnNothingLibelles[1].addEventListener('click',hiddenModalLibelles);
 saveLibelle.addEventListener('click',createLibelle);
-for (let index = 0; index < btnRenameLibelle.length; index++) {
-    btnRenameLibelle[index].addEventListener('click',renameLibelle);
-}
+
+
 
